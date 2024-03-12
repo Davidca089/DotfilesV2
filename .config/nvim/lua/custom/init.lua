@@ -21,12 +21,12 @@ vim.opt.scrolloff = 20
 vim.opt.colorcolumn = "80"
 
 vim.opt.filetype = "on"
-vim.opt.indentexpr=""
+vim.opt.indentexpr = ""
 
 vim.api.nvim_create_autocmd("VimEnter", {
-  callback = function()
-    if vim.fn.argv(0) == "" then
-      require("telescope.builtin").find_files({follow = true, no_ignore=true, hidden=true})
-    end
-  end,
+    callback = function()
+        if vim.fn.argv(0) == "" then
+            require("telescope.builtin").find_files({ follow = true, no_ignore = true, hidden = true })
+        end
+    end,
 })
