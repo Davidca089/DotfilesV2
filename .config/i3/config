@@ -200,3 +200,12 @@ bar {
 
 #BG
 exec --no-startup-id exec feh --no-fehbg --bg-center "$HOME/.config/i3/catbg.jpg"
+
+# color config for borders
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #000000 #000000 #ffffff #484e50   #000000
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+
+client.background       #ffffff
