@@ -31,7 +31,13 @@ local plugins = {
                 "clang-format",
             }
         }
-    }
+    },
+    {
+        "NvChad/ui",
+        config = function()
+            vim.opt.statusline=""
+        end
+    },
 }
 
 return plugins

@@ -1,0 +1,26 @@
+# Default Colours
+[colors.primary]
+background = '#000000'
+foreground = '#FFFFFF'
+
+# Normal Colours
+[colors.normal]
+black   = '#1a1a1a'
+red     = '#cc0000'
+green   = '#f6f6ef'
+yellow  = '#fa8419'
+blue    = '#9d65ff'
+magenta = '#cc0a1a'
+cyan    = '#58d1eb'
+white   = '#c4c5b5'
+
+# Bright Colours
+[colors.bright]
+black   = '#625e4c'
+red     = '#cc0000'
+green   = '#58d1eb'
+yellow  = '#e0d561'
+blue    = '#b86ef0'
+magenta = '#cc0a1a'
+cyan    = '#58d1eb'
+white   = '#f6f6ef'

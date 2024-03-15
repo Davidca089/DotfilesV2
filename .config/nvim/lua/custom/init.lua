@@ -23,6 +23,10 @@ vim.opt.colorcolumn = "80"
 vim.opt.filetype = "on"
 vim.opt.indentexpr = ""
 
+-- remove statusline :))
+vim.opt.laststatus = 0
+vim.opt.statusline =""
+
 vim.api.nvim_create_autocmd("VimEnter", {
     callback = function()
         if vim.fn.argv(0) == "" then

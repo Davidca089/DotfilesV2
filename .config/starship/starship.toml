@@ -18,8 +18,9 @@ $line_break\
 $character"""
 
 [character]
-success_symbol = '[➜](bold white) '
-error_symbol = '[✗](bold purple) '
+success_symbol = '[❯❯](bold white)'
+error_symbol = '[✗](bold red)'
+vimcmd_symbol = '[❮❮](bold white)'
 
 [fill]
 symbol = " "
@@ -43,12 +44,12 @@ threshold = 50
 style = "bold red"
 
 [c]
-style = 'bold blue'
+style = 'bold green'
 symbol = "C"
 format = '[$symbol((-$name) )]($style)'
 
 [python]
-style = "bold green"
+style = "bold blue"
 format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 
 [time]
