@@ -6,10 +6,10 @@ configuration {
 	me-accept-entry: [MousePrimary];
 }
 *{
-	font: "Hack 25";			//Font
+	font: "Hack 14";			//Font
 	//Colors
 	foreground:#f8f8f2; 				//Text
-	background:#0A1229; 				//Background
+	background:#000000; 				//Background
 	accent:#00BCD4; 					//Highlight
 	foreground-selection:@foreground; 	//Selection_fg
 	background-selection:#e34039; 		//Selection_bg
@@ -47,13 +47,12 @@ window {
 mainbox {
 	border:		0;
 	padding: 	0;
-    width:      60%;
 }
 textbox {
 	text-color: @foreground;
 }
 listview {
-	spacing:		8px;
+	spacing:		4px;
 	dynamic:		true;
 	fixed-height:	false;
 	border:			0;
