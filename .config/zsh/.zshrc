@@ -7,6 +7,7 @@ setxkbmap us -variant dvorak
 plug "$HOME/.config/zsh/functions.zsh"
 plug "$HOME/.config/zsh/exports.zsh"
 plug "$HOME/.config/zsh/aliases.zsh"
+plug "$HOME/.config/zsh/confs.zsh"
 
 # imports
 plug "zsh-users/zsh-autosuggestions"
@@ -16,6 +17,10 @@ plug "jeffreytse/zsh-vi-mode"
 # Load and initialise completion system
 autoload -Uz compinit
 compinit
+
+# Change autosuggest key
+bindkey '^I'   complete-word       # tab          | complete
+bindkey '^[[Z' autosuggest-accept  # shift + tab  | autosuggest
 
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
