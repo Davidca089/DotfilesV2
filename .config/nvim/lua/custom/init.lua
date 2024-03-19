@@ -4,28 +4,16 @@ vim.opt.nu = true
 vim.opt.relativenumber = true
 
 -- tabbing made right
-vim.opt.expandtab = true
-vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.cindent = true
+vim.expandtab = true
+vim.scrolloff = 20
 
-vim.opt.wrap = false
+--vim.g.copilot_assume_mapped = true
+--vim.g.copilot_no_tab_map = true
 
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
-
-vim.opt.termguicolors = true
-
-vim.opt.scrolloff = 20
-
-vim.opt.colorcolumn = "80"
-
-vim.opt.filetype = "on"
-vim.opt.indentexpr = ""
-
--- remove statusline :))
-vim.opt.laststatus = 0
-vim.opt.statusline =""
+--vim.api.nvim_set_keymap("i", "<Tab>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+--vim.api.nvim_set_keymap("i", "<C-H>", 'copilot#Previous()', { silent = true, expr = true })
+--vim.api.nvim_set_keymap("i", "<C-K>", 'copilot#Next()', { silent = true, expr = true })
 
 vim.api.nvim_create_autocmd("VimEnter", {
     callback = function()
