@@ -5,8 +5,8 @@ vim.opt.relativenumber = true
 
 -- tabbing made right
 vim.opt.shiftwidth = 4
-vim.expandtab = true
-vim.scrolloff = 20
+vim.opt.expandtab = true
+vim.opt.scrolloff = 20
 
 --vim.g.copilot_assume_mapped = true
 --vim.g.copilot_no_tab_map = true
