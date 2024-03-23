@@ -1,0 +1,10 @@
+customCommands:
+  - key: 't'
+    context: 'files'
+    prompts:
+      - type: 'input'
+        title: 'Gimme tag :)'
+        key: 'Tag'
+        initialValue: "{{ .SelectedTag.Name }}"
+    command: 'git tag -ma {{ .Form.Tag }} && git push --follow-tags'
+    loadingText: 'Pushing this tag'
