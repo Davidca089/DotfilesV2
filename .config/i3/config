@@ -230,3 +230,6 @@ client.background       #ffffff
 
 # so changing focus stays on the window
 focus_wrapping workspace
+
+# picom stuff
+exec --no-startup-id picom &

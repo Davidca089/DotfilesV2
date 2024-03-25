@@ -14,5 +14,5 @@ alias tester='cd ~/Desk/school/shell/21sh/42sh/tests/categories/execution'
 alias conf="cd $HOME/.config/nvim/lua/custom"
 alias cat="bat"
 alias pp="piscine_push"
-alias tigenv="docker run --rm -it -v $PWD:/tc --workdir /tc registry.lrde.epita.fr/tc-sid"
+alias tigenv="docker run --rm -it -v $PWD:/tc --workdir /tc ghcr.io/oggmgc/tiger:latest"
 alias lz="lazygit"

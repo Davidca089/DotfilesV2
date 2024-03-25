@@ -27,6 +27,7 @@ local plugins = {
         opts = {
             ensure_installed = {
                 "clangd",
+                "gopls",
                 "lua-language-server",
                 "clang-format",
             }
@@ -51,6 +52,16 @@ local plugins = {
         dependencies = {
             "nvim-lua/plenary.nvim",
         },
+    },
+    {
+        "olexsmir/gopher.nvim",
+        ft = "go",
+        config = function(_, opts)
+            require("gopher").setup(opts)
+        end,
+        build = function()
+            vim.cmd [[silent! GoInstallDeps]]
+        end
     },
     --{
     --    lazy = false,
