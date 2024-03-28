@@ -24,3 +24,6 @@ bindkey '^[[Z' autosuggest-accept  # shift + tab  | autosuggest
 
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
+
+# run zoxide to look for file
+bindkey -s '^T' 'cdi\n'

@@ -5,6 +5,7 @@ vim.opt.relativenumber = true
 
 -- tabbing made right
 vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
 vim.opt.expandtab = true
 vim.opt.scrolloff = 20
 

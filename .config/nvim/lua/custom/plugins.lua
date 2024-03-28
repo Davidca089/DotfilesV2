@@ -63,6 +63,10 @@ local plugins = {
             vim.cmd [[silent! GoInstallDeps]]
         end
     },
+    {
+        lazy = false,
+        "jbyuki/instant.nvim",
+    },
     --{
     --    lazy = false,
     --    "zbirenbaum/copilot.lua",
