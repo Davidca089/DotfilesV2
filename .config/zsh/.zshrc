@@ -26,4 +26,4 @@ eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
 
 # run zoxide to look for file
-bindkey -s '^T' 'cdi\n'
+bindkey -s '^Z' 'cdi\n'
