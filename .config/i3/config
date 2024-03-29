@@ -106,6 +106,9 @@ bindsym $mod+Shift+F1 exec /home/$USER/.config/i3/i3lock-multimonitor/lock
 
 bindsym $mod+Shift+F exec firefox
 
+# screenshot flameshot
+bindsym $mod+Shift+W exec flameshot gui
+
 
 
 # change container layout (stacked, tabbed, toggle split)

@@ -3,21 +3,21 @@ local plugins = {
         lazy = false,
         "ThePrimeagen/harpoon",
         branch = "harpoon2",
-        dependencies = { {"nvim-lua/plenary.nvim"} },
-        config = function ()
+        dependencies = { { "nvim-lua/plenary.nvim" } },
+        config = function()
             require "custom.configs.harpoon"
         end,
     },
     {
         "jose-elias-alvarez/null-ls.nvim",
         event = "VeryLazy",
-        opts = function ()
+        opts = function()
             return require "custom.configs.null-ls"
         end,
     },
     {
         "neovim/nvim-lspconfig",
-        config = function ()
+        config = function()
             require "plugins.configs.lspconfig"
             require "custom.configs.lspconfig"
         end,
@@ -36,18 +36,18 @@ local plugins = {
     {
         "NvChad/ui",
         config = function()
-            vim.opt.statusline=""
+            vim.opt.statusline = ""
         end
     },
     {
         "kdheepak/lazygit.nvim",
-    	cmd = {
-    		"LazyGit",
-    		"LazyGitConfig",
-    		"LazyGitCurrentFile",
-    		"LazyGitFilter",
-    		"LazyGitFilterCurrentFile",
-    	},
+        cmd = {
+            "LazyGit",
+            "LazyGitConfig",
+            "LazyGitCurrentFile",
+            "LazyGitFilter",
+            "LazyGitFilterCurrentFile",
+        },
         -- optional for floating window border decoration
         dependencies = {
             "nvim-lua/plenary.nvim",
@@ -67,6 +67,21 @@ local plugins = {
         lazy = false,
         "jbyuki/instant.nvim",
     },
+    {
+        "nvim-treesitter/nvim-treesitter",
+        opts = {
+            ensure_installed = {
+                -- defaults
+                "vim",
+                "lua",
+                "vimdoc",
+                -- low level
+                "c",
+                "cpp",
+            },
+        },
+    },
+
     --{
     --    lazy = false,
     --    "zbirenbaum/copilot.lua",
