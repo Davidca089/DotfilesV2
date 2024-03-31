@@ -27,3 +27,5 @@ eval "$(starship init zsh)"
 
 # run zoxide to look for file
 bindkey -s '^Z' 'cdi\n'
+# lazygit
+bindkey -s '^\' 'lazygit\n'

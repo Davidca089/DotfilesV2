@@ -36,7 +36,7 @@ M.abc = {
         ["<leader>p"] = { "\"_dP" },
         ["<leader>y"] = { "\"+y" },
         ["<leader>Y"] = { "\"+Y" },
-        ["<leader>lz"] = { ":LazyGit <CR>" },
+        ["<C-\\>"] = { ":LazyGit <CR>" },
     },
 
     i = {

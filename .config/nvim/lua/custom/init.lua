@@ -1,4 +1,6 @@
 vim.opt.scrolloff = 20
+vim.opt.nu = true
+vim.opt.relativenumber = true
 
 --vim.g.copilot_assume_mapped = true
 --vim.g.copilot_no_tab_map = true
