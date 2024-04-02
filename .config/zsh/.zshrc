@@ -29,3 +29,5 @@ eval "$(starship init zsh)"
 bindkey -s '^Z' 'cdi\n'
 # lazygit
 bindkey -s '^\' 'lazygit\n'
+# vim
+bindkey -s '^V' 'nvim\n'
