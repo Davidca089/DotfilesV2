@@ -19,3 +19,4 @@ alias lz="lazygit"
 alias tclone="sudo rm -rf tiger && git clone git@github.com:OGGMGC/Tiger.git tiger && cd tiger"
 alias ytaudio="yt-dlp -f 'ba' -x --no-playlist"
 alias mc="musikcube"
+alias max='br 250'
