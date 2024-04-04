@@ -81,7 +81,6 @@ local plugins = {
             },
         },
     },
-
     --{
     --    lazy = false,
     --    "zbirenbaum/copilot.lua",

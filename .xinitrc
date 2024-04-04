@@ -7,3 +7,5 @@
 #    --output HDMI-1 --primary --scale 2x2 --rate 165 --pos 2880x0 --panning 3840x2160+2880+0
 
 #xrandr --output HDMI-1 --primary --left-of eDP-1
+CONNECTED=$(xrandr -q | grep "connected" | wc -l)
+[ $CONNECTED == 2 ] && xrandr --output HDMI-1 --mode "1920x1080" --primary --left-of eDP-1 --dpi 192
