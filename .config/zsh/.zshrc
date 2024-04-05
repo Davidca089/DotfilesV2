@@ -26,8 +26,10 @@ eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
 
 # run zoxide to look for file
-bindkey -s '^Z' 'cdi\n'
+bindkey -s '^V' 'cdi\n'
 # lazygit
 bindkey -s '^\' 'lazygit\n'
 # vim
-bindkey -s '^V' 'nvim\n'
+bindkey -s '^Z' 'nvim\n'
+# tmux smart
+bindkey -s '^T' 'tms\n'

@@ -171,3 +171,4 @@ function piscine_push()
 #export PS1="$randEmoji ➜ $bracketBase "
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+. "$HOME/.cargo/env"
