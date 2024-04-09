@@ -130,3 +130,14 @@ function create_makefile() {
 function br() { echo "$1" > /sys/class/backlight/amdgpu_bl1/brightness; }
 
 function jump() { mkdir "$1" && cd "$1";}
+
+function zellij_attach_session {
+	local session_name
+
+	session_name="$(zellij ls \
+		| fzf --header "Select session to attach" --prompt "Session: " \
+		| awk '{print $1}')"
+
+	zellij a "$session_name"
+	exit 0
+}

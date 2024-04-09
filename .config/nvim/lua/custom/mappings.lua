@@ -30,13 +30,12 @@ M.abc = {
     },
 
     n = {
-        ["<leader>pv"] = { ":NvimTreeToggle <CR>" },
-        ["<C-h>"] = { ":NvimTreeFocus <CR>" },
-        ["<F4>"] = { ":NvimTreeToggle <CR>" },
         ["<leader>p"] = { "\"_dP" },
         ["<leader>y"] = { "\"+y" },
         ["<leader>Y"] = { "\"+Y" },
+        ["/"] = {":SearchBoxMatchAll <CR>"},
         ["<C-\\>"] = { ":LazyGit <CR>" },
+        ["<leader>s"] = { ":SearchBoxMatchAll exact=true -- <C-r>=expand('<cword>')<CR><CR>" },
     },
 
     i = {
@@ -45,6 +44,7 @@ M.abc = {
 
     x = {
         ["<leader>p"] = { "\"_dP" },
+        ["<leader>r"] = {":SearchBoxReplace visual_mode=true<CR>"},
     }
 }
 

@@ -31,5 +31,5 @@ bindkey -s '^V' 'cdi\n'
 bindkey -s '^\' 'lazygit\n'
 # vim
 bindkey -s '^Z' 'nvim\n'
-# tmux smart
+# tmux sessionizer
 bindkey -s '^T' 'tms\n'

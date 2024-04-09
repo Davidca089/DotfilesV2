@@ -81,6 +81,13 @@ local plugins = {
             },
         },
     },
+    {
+        lazy = false,
+        'VonHeikemen/searchbox.nvim',
+        dependencies = {
+            "MunifTanjim/nui.nvim",
+        },
+    },
     --{
     --    lazy = false,
     --    "zbirenbaum/copilot.lua",

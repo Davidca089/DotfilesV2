@@ -356,7 +356,7 @@ M.nvterm = {
 }
 
 M.whichkey = {
-  plugin = true,
+  plugin = false,
 
   n = {
     ["<leader>wK"] = {
