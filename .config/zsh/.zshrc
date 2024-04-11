@@ -33,3 +33,6 @@ bindkey -s '^\' 'lazygit\n'
 bindkey -s '^Z' 'nvim\n'
 # tmux sessionizer
 bindkey -s '^T' 'tms\n'
+
+# opam configuration
+[[ ! -r /home/sisoyyo/.opam/opam-init/init.zsh ]] || source /home/sisoyyo/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null

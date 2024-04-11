@@ -27,6 +27,7 @@ local plugins = {
         opts = {
             ensure_installed = {
                 "clangd",
+                "ocaml-lsp",
                 "gopls",
                 "lua-language-server",
                 "clang-format",
@@ -88,35 +89,45 @@ local plugins = {
             "MunifTanjim/nui.nvim",
         },
     },
-    --{
-    --    lazy = false,
-    --    "zbirenbaum/copilot.lua",
-    --    event = "InsertEnter",
-    --    config = function()
-    --        require("copilot").setup({})
-    --    end,
-    --},
-    --{
-    --    "hrsh7th/nvim-cmp",
-    --    dependencies = {
-    --        {
-    --            "zbirenbaum/copilot-cmp",
-    --            config = function ()
-    --                require("copilot_cmp").setup()
-    --            end,
-    --        },
-    --    },
-    --    opts = {
-    --        sources = {
-    --            { name = "copilot" , group_index = 2},
-    --            { name = "nvim_lsp", group_index = 2},
-    --            { name = "luasnip" , group_index = 2},
-    --            { name = "buffer" , group_index = 2},
-    --            { name = "nvim_lua" , group_index = 2},
-    --            { name = "path" , group_index = 2},
-    --        },
-    --    },
-    --},
+    {
+        lazy = false,
+        'stevearc/oil.nvim',
+        opts = {},
+        -- Optional dependencies
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        config = function()
+            require "custom.configs.oil"
+        end,
+    },
+    -- {
+    --     lazy = false,
+    --     "zbirenbaum/copilot.lua",
+    --     event = "InsertEnter",
+    --     config = function()
+    --         require("copilot").setup({})
+    --     end,
+    -- },
+    -- {
+    --     "hrsh7th/nvim-cmp",
+    --     dependencies = {
+    --         {
+    --             "zbirenbaum/copilot-cmp",
+    --             config = function()
+    --                 require("copilot_cmp").setup()
+    --             end,
+    --         },
+    --     },
+    --     opts = {
+    --         sources = {
+    --             { name = "copilot",   group_index = 2 },
+    --             { name = "nvim_lsp",  group_index = 2 },
+    --             { name = "luasnip",   group_index = 2 },
+    --             { name = "buffer",    group_index = 2 },
+    --             { name = "nvim_lua",  group_index = 2 },
+    --             { name = "path",      group_index = 2 },
+    --         },
+    --     },
+    -- },
 }
 
 return plugins

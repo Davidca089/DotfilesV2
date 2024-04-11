@@ -36,6 +36,7 @@ M.abc = {
         ["/"] = {":SearchBoxMatchAll <CR>"},
         ["<C-\\>"] = { ":LazyGit <CR>" },
         ["<leader>s"] = { ":SearchBoxMatchAll exact=true -- <C-r>=expand('<cword>')<CR><CR>" },
+        ["<leader>r"] = { ":SearchBoxReplace exact=true -- <C-r>=expand('<cword>')<CR><CR>" },
     },
 
     i = {
@@ -44,7 +45,7 @@ M.abc = {
 
     x = {
         ["<leader>p"] = { "\"_dP" },
-        ["<leader>r"] = {":SearchBoxReplace visual_mode=true<CR>"},
+        ["<leader>r"] = {":SearchBoxReplace modifier=':\\C' visual_mode=true<CR>"},
     }
 }
 
