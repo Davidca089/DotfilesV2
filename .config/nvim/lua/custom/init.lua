@@ -1,3 +1,8 @@
+-- close buffers when leaving them
+vim.opt.bh = "delete"
+
+vim.opt.swapfile = false
+
 vim.opt.scrolloff = 20
 vim.opt.nu = true
 vim.opt.relativenumber = true

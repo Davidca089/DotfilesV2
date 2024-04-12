@@ -65,16 +65,13 @@ local plugins = {
         end
     },
     {
-        lazy = false,
-        "jbyuki/instant.nvim",
-    },
-    {
         "nvim-treesitter/nvim-treesitter",
         opts = {
             ensure_installed = {
                 -- defaults
                 "vim",
                 "lua",
+                "python",
                 "vimdoc",
                 -- low level
                 "c",
@@ -99,6 +96,11 @@ local plugins = {
             require "custom.configs.oil"
         end,
     },
+    -- {
+    --     "chrisgrieser/nvim-early-retirement",
+    --     config = true,
+    --     event = "VeryLazy",
+    -- },
     -- {
     --     lazy = false,
     --     "zbirenbaum/copilot.lua",
