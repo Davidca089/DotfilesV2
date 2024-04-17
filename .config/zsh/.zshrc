@@ -14,6 +14,9 @@ plug "zsh-users/zsh-autosuggestions"
 plug "zsh-users/zsh-syntax-highlighting"
 plug "jeffreytse/zsh-vi-mode"
 
+# works form tmux
+setopt share_history
+
 # Load and initialise completion system
 autoload -Uz compinit
 compinit
@@ -31,8 +34,10 @@ bindkey -s '^V' 'cdi\n'
 bindkey -s '^\' 'lazygit\n'
 # vim
 bindkey -s '^Z' 'nvim\n'
-# tmux sessionizer
-bindkey -s '^T' 'tms\n'
+# tmux config
+bindkey -s '^T' 't\n'
+# oil
+bindkey -s '^O' 'nvim .\n'
 
 # opam configuration
 [[ ! -r /home/sisoyyo/.opam/opam-init/init.zsh ]] || source /home/sisoyyo/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null

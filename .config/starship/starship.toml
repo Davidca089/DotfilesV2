@@ -12,6 +12,7 @@ $c\
 $java\
 $python\
 $rust\
+$ocaml\
 \
 $cmd_duration $jobs $time $battery\
 $line_break\

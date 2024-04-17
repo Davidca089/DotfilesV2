@@ -141,3 +141,9 @@ function zellij_attach_session {
 	zellij a "$session_name"
 	exit 0
 }
+
+tn ()
+{
+    NAME=$(pwd | sed 's/.*\///g')
+    tmux new -s $(echo $NAME)
+}
