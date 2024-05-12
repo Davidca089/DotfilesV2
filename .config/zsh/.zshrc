@@ -1,3 +1,5 @@
+# UNCOMMENT THIS TO MEASURE TIME AND UNCOMMENT ZPROF AT THE BOTTOM
+# zmodload zsh/zprof
 # Created by Zap installer
 [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
 
@@ -40,4 +42,8 @@ bindkey -s '^T' 't\n'
 bindkey -s '^O' 'nvim .\n'
 
 # opam configuration
-[[ ! -r /home/sisoyyo/.opam/opam-init/init.zsh ]] || source /home/sisoyyo/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+# [[ ! -r /home/sisoyyo/.opam/opam-init/init.zsh ]] || source /home/sisoyyo/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+# nvm
+# export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+# zprof
