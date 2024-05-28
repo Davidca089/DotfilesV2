@@ -1,24 +1,36 @@
 -- mapppings
-vim.cmd("set noswapfile")
 vim.g.mapleader = " "
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 
+-- backups
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undofile = true
+
+-- colorscheme
 vim.o.background = "dark"
+vim.opt.termguicolors = true
 
+-- remove BLOATED messages (statusline)
 vim.opt.laststatus = 0
--- ruler
-
-vim.opt.clipboard = "unnamedplus"
+vim.opt.cmdheight = 0
+vim.api.nvim_set_hl(0, "Statusline", { link = "Normal" })
+vim.api.nvim_set_hl(0, "StatuslineNC", { link = "Normal" })
+vim.opt.statusline = string.rep("-", vim.api.nvim_win_get_width(0))
 
 -- Indenting
 vim.opt.smartindent = false
 vim.opt.scrolloff = 20
 vim.opt.nu = true
-vim.opt.colorcolumn = "80"
 vim.opt.rnu = true
+vim.opt.colorcolumn = "80"
+
+-- insert
+vim.keymap.set("i", "<C-c>", "<Esc>")
 
 -- visual
 vim.keymap.set("v", ">", ">gv")
@@ -41,4 +53,6 @@ vim.keymap.set("n", "<C-c>", "<cmd> %y+ <CR>")
 vim.keymap.set("n", "<leader>p", '"_dP')
 
 -- global
-vim.keymap.set({ "n", "v", "i" }, "<C-t>", ":!t<CR>")
+-- tmux session stuff
+vim.keymap.set({ "n", "v", "i" }, "<C-t>", ":silent !t<CR>")
+vim.keymap.set("n", "<leader>js", ":!node %<CR>")

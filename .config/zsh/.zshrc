@@ -10,11 +10,11 @@ plug "$HOME/.config/zsh/functions.zsh"
 plug "$HOME/.config/zsh/exports.zsh"
 plug "$HOME/.config/zsh/aliases.zsh"
 plug "$HOME/.config/zsh/confs.zsh"
+plug "$HOME/.config/zsh/key-bindings.zsh"
 
 # imports
 plug "zsh-users/zsh-autosuggestions"
 plug "zsh-users/zsh-syntax-highlighting"
-plug "jeffreytse/zsh-vi-mode"
 
 # works form tmux
 setopt share_history
@@ -27,6 +27,7 @@ compinit
 bindkey '^I'   complete-word       # tab          | complete
 bindkey '^[[Z' autosuggest-accept  # shift + tab  | autosuggest
 
+# ZOxide and starship support
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
 

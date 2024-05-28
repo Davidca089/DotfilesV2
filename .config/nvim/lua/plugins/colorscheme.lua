@@ -1,5 +1,7 @@
 return {
-    -- the setup is done with telescope via <leader>th
+    {
+        "nyoom-engineering/oxocarbon.nvim",
+    },
     { "Shatur/neovim-ayu" },
     { "EdenEast/nightfox.nvim" },
     {
@@ -10,9 +12,12 @@ return {
             require("tokyonight").setup({
                 -- use the night style
                 style = "night",
-                -- disable italic for functions
+                -- disable italic
                 styles = {
                     functions = {},
+                    variables = {},
+                    comments = { italic = false },
+                    keywords = { italic = false },
                 },
                 sidebars = { "qf", "vista_kind", "terminal", "packer" },
                 -- Change the "hint" color to the "orange" color, and make the "error" color bright red
@@ -54,7 +59,8 @@ return {
             })
             local builtin = require("telescope.builtin")
             vim.keymap.set("n", "<C-z>", builtin.find_files, {})
-            vim.keymap.set("n", "<C-w>", builtin.live_grep, {})
+            -- vim.keymap.set("n", "<C-w>", builtin.live_grep, {})
+            vim.keymap.set("n", "<C-w>", ":Telescope live_grep<CR>", {})
         end,
     },
 }

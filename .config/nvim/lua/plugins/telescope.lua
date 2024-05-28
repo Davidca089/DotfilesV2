@@ -1,7 +1,7 @@
 return {
     {
         "nvim-telescope/telescope.nvim",
-        tag = "0.1.6",
+        tag = "0.1.7",
         dependencies = {
             -- base dependency
             "nvim-lua/plenary.nvim",
@@ -81,7 +81,7 @@ return {
 
             local builtin = require("telescope.builtin")
             vim.keymap.set("n", "<C-z>", builtin.find_files, {})
-            vim.keymap.set("n", "<C-w>", builtin.live_grep, {})
+            vim.keymap.set("n", "<C-w>", ":Telescope live_grep<CR>", {})
 
             -- theme picker
             vim.keymap.set(

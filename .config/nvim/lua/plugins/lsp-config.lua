@@ -11,10 +11,11 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					"clangd",
-					"pylsp",
+					"pyright",
 					"ocamllsp",
 					"gopls",
 					"lua_ls",
+					"tsserver",
 					"rust_analyzer",
 					--"clang-format",
 				},
@@ -22,16 +23,33 @@ return {
 		end,
 	},
 	{
+		"folke/neodev.nvim",
+		opts = {},
+	},
+	{
 		"neovim/nvim-lspconfig",
+		-- neovim develop
+		dependecies = { "folke/neodev.nvim", opts = {} },
 		lazy = false,
 		config = function()
 			-- asks the lsp server to send back some extra information basically
-			-- thats why we pass it to every server.
+			-- thats why -- IMPORTANT: make sure to setup neodev BEFORE lspconfig
+			require("neodev").setup({})
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
+			-- local base =
+			-- local util = require("lspconfig.util")
 
 			-- server setup
-			lspconfig.pylsp.setup({
+			-- lspconfig.pylsp.setup({
+			-- 	capabilities = capabilities,
+			-- })
+
+			lspconfig.tsserver.setup({
+				capabilities = capabilities,
+				-- root_dir = util.root_pattern(".git"),
+			})
+			lspconfig.pyright.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.lua_ls.setup({
@@ -42,6 +60,10 @@ return {
 			})
 			lspconfig.clangd.setup({
 				capabilities = capabilities,
+				cmd = {
+					"clangd",
+					"--offset-encoding=utf-16",
+				},
 			})
 			lspconfig.ocamllsp.setup({
 				capabilities = capabilities,
@@ -50,7 +72,7 @@ return {
 			vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
+			-- vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
 		end,
 	},
 }

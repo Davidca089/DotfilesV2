@@ -26,6 +26,6 @@ return {
 			end,
 		})
 
-		vim.keymap.set("n", "<F2>", vim.lsp.buf.format, {})
+		vim.keymap.set("n", "<F1>", vim.lsp.buf.format, {})
 	end,
 }
