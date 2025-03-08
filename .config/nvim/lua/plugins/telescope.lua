@@ -80,7 +80,7 @@ return {
             })
 
             local builtin = require("telescope.builtin")
-            vim.keymap.set("n", "<C-z>", builtin.find_files, {})
+            vim.keymap.set("n", "<C-z><CR>", builtin.find_files, {})
             vim.keymap.set("n", "<C-w>", ":Telescope live_grep<CR>", {})
 
             -- theme picker

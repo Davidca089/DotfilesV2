@@ -21,7 +21,7 @@ setopt share_history
 
 # Load and initialise completion system
 autoload -Uz compinit
-compinit
+# compinit
 
 # Change autosuggest key
 bindkey '^I'   complete-word       # tab          | complete

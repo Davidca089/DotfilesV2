@@ -1,4 +1,4 @@
-import = ["/home/sisoyyo/.config/alacritty/cool_theme.toml"]
+import = ["/home/davidca12/.config/alacritty/cool_theme.toml"]
 
 [colors]
 draw_bold_text_with_bright_colors = true
@@ -23,4 +23,4 @@ family = "monospace"
 style = "Regular"
 
 [window]
-opacity = 0.60
+opacity = 0.90

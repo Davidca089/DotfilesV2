@@ -127,7 +127,7 @@ function create_makefile() {
   fi
 }
 
-function br() { echo "$1" > /sys/class/backlight/amdgpu_bl1/brightness; }
+function br() { echo "$1" > /sys/class/backlight/amdgpu_bl2/brightness; }
 
 function jump() { mkdir "$1" && cd "$1";}
 
