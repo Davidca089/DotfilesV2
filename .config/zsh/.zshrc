@@ -3,7 +3,10 @@
 # Created by Zap installer
 [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
 
-setxkbmap us -variant dvorak
+#setxkbmap us -variant dvorak-intl
+
+# Set vim mode
+bindkey -v
 
 # source
 plug "$HOME/.config/zsh/functions.zsh"
@@ -21,7 +24,9 @@ setopt share_history
 
 # Load and initialise completion system
 autoload -Uz compinit
+
 # compinit
+
 
 # Change autosuggest key
 bindkey '^I'   complete-word       # tab          | complete
@@ -41,6 +46,7 @@ bindkey -s '^Z' 'nvim\n'
 bindkey -s '^T' 't\n'
 # oil
 bindkey -s '^O' 'nvim .\n'
+
 
 # opam configuration
 # [[ ! -r /home/sisoyyo/.opam/opam-init/init.zsh ]] || source /home/sisoyyo/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null

@@ -56,3 +56,17 @@ vim.keymap.set("n", "<leader>p", '"_dP')
 -- tmux session stuff
 vim.keymap.set({ "n", "v", "i" }, "<C-t>", ":silent !t<CR>")
 vim.keymap.set("n", "<leader>js", ":!node %<CR>")
+
+-- cool remaps
+
+-- greatest remap ever
+vim.keymap.set("x", "<leader>p", [["_dP]])
+
+
+-- next greatest remap ever : asbjornHaland
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+vim.keymap.set("n", "<leader>Y", [["+Y]])
+
+vim.keymap.set({ "n", "v" }, "<leader>d", "\"_d")
+
+-- vim.api.nvim_set_option("clipboard", "unnamed")

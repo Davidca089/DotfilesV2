@@ -129,6 +129,7 @@ function create_makefile() {
 
 function br() { echo "$1" > /sys/class/backlight/amdgpu_bl2/brightness; }
 
+function jp() { mkdir "$1" && cd "$1";}
 function jump() { mkdir "$1" && cd "$1";}
 
 function zellij_attach_session {

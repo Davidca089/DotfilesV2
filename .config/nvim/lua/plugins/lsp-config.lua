@@ -10,13 +10,11 @@ return {
         config = function()
             require("mason-lspconfig").setup({
                 ensure_installed = {
-                    -- "clangd",
-                    -- "pyright",
-                    -- "ocamllsp",
-                    -- "gopls",
-                    -- "lua_ls",
-                    -- "tsserver",
-                    -- "rust_analyzer",
+                    "clangd",
+                    "lua_ls",
+                    "rust_analyzer",
+                    "pyright",
+                    "gopls",
                     --"clang-format",
                 },
             })
@@ -37,37 +35,37 @@ return {
             require("neodev").setup({})
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
             local lspconfig = require("lspconfig")
-            -- local base =
-            -- local util = require("lspconfig.util")
 
             -- server setup
-            -- lspconfig.pylsp.setup({
-            -- 	capabilities = capabilities,
-            -- })
-
             -- lspconfig.tsserver.setup({
             --     capabilities = capabilities,
             --     -- root_dir = util.root_pattern(".git"),
             -- })
-            -- lspconfig.pyright.setup({
-            --     capabilities = capabilities,
-            -- })
-            -- lspconfig.lua_ls.setup({
-            --     capabilities = capabilities,
-            -- })
-            -- lspconfig.gopls.setup({
-            --     capabilities = capabilities,
-            -- })
-            -- lspconfig.clangd.setup({
-            --     capabilities = capabilities,
-            --     cmd = {
-            --         "clangd",
-            --         "--offset-encoding=utf-16",
-            --     },
-            -- })
-            -- lspconfig.ocamllsp.setup({
-            --     capabilities = capabilities,
-            -- })
+
+            vim.lsp.config("pyright", {
+                capabilities = capabilities,
+            })
+            vim.lsp.enable("pyright")
+
+            vim.lsp.config("lua_ls", {
+                capabilities = capabilities,
+            })
+            vim.lsp.enable("lua_ls")
+
+            vim.lsp.config("gopls", {
+                capabilities = capabilities,
+            })
+            vim.lsp.enable("gopls")
+
+            vim.lsp.config("clangd", {
+                capabilities = capabilities,
+                cmd = {
+                    "clangd",
+                    "--offset-encoding=utf-16",
+                },
+            })
+            vim.lsp.enable("clangd")
+
 
             vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {})
             vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})

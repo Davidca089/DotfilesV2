@@ -1,0 +1,41 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  {
+    // NORMAL and VISUAL modes
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+    "bindings": {
+      // Tab things. Almost as good as harpoon.
+      "space h": ["pane::ActivateItem", 0],
+      "space t": ["pane::ActivateItem", 1],
+      "space n": ["pane::ActivateItem", 2],
+      "space s": ["pane::ActivateItem", 3],
+      "space 0": "pane::ActivateLastItem",
+      "] b": "pane::ActivateNextItem",
+      // File explorer...
+      "space .": "workspace::ToggleLeftDock",
+      // "Telescope" things.
+      "space space": "file_finder::Toggle",
+      // Indenting/Unindenting.
+      "tab": "editor::Indent",
+      "shift-tab": "editor::TabPrev",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    },
+  },
+]
